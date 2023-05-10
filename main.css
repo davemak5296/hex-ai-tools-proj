@@ -20,6 +20,9 @@
   .ai-categories-wrap > * {
     scroll-snap-align: start;
   }
+  .carousel-dots .dot.active {
+    @apply w-5 h-5 bg-[#ccc]
+  }
 }
 /* @import "./index.css";
 @import "./App.css"; */

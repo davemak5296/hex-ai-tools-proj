@@ -82,7 +82,7 @@ module.exports = {
           "100%": { transform: 'translateY(-100%)'}
         },
         "marquee": {
-          "0%": { transform: 'translateX(100%)'},
+          "0%": { transform: 'translateX(0%)'},
           "100%": {transform: 'translateX(-100%)'},
         }
       },
@@ -90,7 +90,8 @@ module.exports = {
         "flyout": 'flyout 3s cubic-bezier(0.05,0.05,1,1) 1s infinite',
         "flyout-1": 'flyout-1 3s cubic-bezier(0.05,0.05,1,1) 0.88s infinite',
         "flyout-2": 'flyout-2 3s cubic-bezier(0.05,0.05,1,1) 0.76s infinite',
-        "marquee": 'marquee 12s linear 1s infinite'
+        "marquee-sm": 'marquee 18s linear infinite',
+        "marquee-lg": 'marquee 14s linear infinite'
       }
     }
   },

@@ -70,21 +70,21 @@
         </ul>
       </section>
       <!-- partner -->
-      <section class="w-full my-30 lg:my-40">
+      <section class="w-full my-30 lg:my-40 relative">
         <h4 class="text-xl md:text-3xl">來自合作夥伴</h4>
         <div class="mt-6 md:mt-12 lg:mt-20">
           <div class="w-full gradient-overlay overflow-hidden">
-            <div class="flex overflow-hidden animate-marquee">
+            <div class="w-[2000px] flex flex-nowrap animate-marquee-sm lg:animate-marquee-lg">
               <img src="/assets/enterprise.png" class="w-fit" alt="">
-              <img src="/assets/enterprise1.png" class="w-fit " alt="">
-              <img src="/assets/enterprise2.png" class="w-fit " alt="">
-              <img src="/assets/enterprise3.png" class="w-fit " alt="">
-              <img src="/assets/enterprise4.png" class="w-fit " alt="">
-              <img src="/assets/enterprise5.png" class="w-fit " alt="">
+              <img src="/assets/enterprise1.png" class="w-fit" alt="">
+              <img src="/assets/enterprise2.png" class="w-fit" alt="">
+              <img src="/assets/enterprise3.png" class="w-fit" alt="">
+              <img src="/assets/enterprise4.png" class="w-fit" alt="">
+              <img src="/assets/enterprise5.png" class="w-fit" alt="">
             </div>
           </div>
           <div class="w-full gradient-overlay overflow-hidden">
-            <div class="flex overflow-hidden animate-marquee">
+            <div class="w-[2000px] flex flex-nowrap animate-marquee-sm lg:animate-marquee-lg">
               <img src="/assets/enterprise6.png" class="w-fit" alt="">
               <img src="/assets/enterprise7.png" class="w-fit " alt="">
               <img src="/assets/enterprise8.png" class="w-fit " alt="">
@@ -95,8 +95,8 @@
           </div>
         </div>
         <!-- partner-cards -->
-        <ul class="mt-12 lg:mt-40 lg:flex lg:justify-between">
-          <li class="w-full lg:w-1/3 mr-6 p-5 lg:p-10 bg-white/[8%] outline-1 rounded-xl flex flex-col">
+        <ul class="carousel w-[400px] lg:w-full mt-12 lg:mt-40 mx-auto lg:mx-0 flex lg:justify-between overflow-x-hidden transition-transform duration-500">
+          <li class="carousel-item w-full lg:w-1/3 mr-6 p-5 lg:p-10 bg-white/[8%] outline-1 rounded-xl flex-none lg:flex-auto flex flex-col">
             <div class="flex">
               <img src="/assets/icons/star.png" class="w-4 h-4 mr-1" alt="">
               <img src="/assets/icons/star.png" class="w-4 h-4 mr-1" alt="">
@@ -117,7 +117,7 @@
               </div>
             </div>
           </li>
-          <li class="w-full lg:w-1/3 mr-6 p-5 lg:p-10 bg-white/[8%] outline-1 rounded-xl flex flex-col">
+          <li class="carousel-item w-full lg:w-1/3 mr-6 p-5 lg:p-10 bg-white/[8%] outline-1 rounded-xl flex-none lg:flex-auto flex flex-col">
             <div class="flex">
               <img src="/assets/icons/star.png" class="w-4 h-4 mr-1" alt="">
               <img src="/assets/icons/star.png" class="w-4 h-4 mr-1" alt="">
@@ -138,7 +138,7 @@
               </div>
             </div>
           </li>
-          <li class="w-full lg:w-1/3 p-5 lg:p-10 bg-white/[8%] outline-1 rounded-xl flex flex-col">
+          <li class="carousel-item w-full lg:w-1/3 p-5 lg:p-10 bg-white/[8%] outline-1 rounded-xl flex-none lg:flex-auto flex flex-col">
             <div class="flex">
               <img src="/assets/icons/star.png" class="w-4 h-4 mr-1" alt="">
               <img src="/assets/icons/star.png" class="w-4 h-4 mr-1" alt="">
@@ -160,6 +160,11 @@
             </div>
           </li>
         </ul>
+        <div class="carousel-dots w-fit mx-auto flex lg:hidden justify-center items-center absolute bottom-[-30px] left-0 right-0">
+          <span class="dot active w-3.5 h-3.5 rounded-full mx-2 bg-[#555] cursor-pointer transition-all"></span>
+          <span class="dot w-3.5 h-3.5 rounded-full mx-2 bg-[#555] cursor-pointer transition-all"></span>
+          <span class="dot w-3.5 h-3.5 rounded-full mx-2 bg-[#555] cursor-pointer transition-all"></span>
+        </div>
       </section>
     </main>
     <!-- ai-tools -->
