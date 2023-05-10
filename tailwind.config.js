@@ -5,6 +5,10 @@ module.exports = {
   ],
   theme: {
     fontSize: {
+      'xs': ['0.75rem', {
+        lineHeight: '1.5',
+        fontWeight: '400'
+      }],
       'sm': ['0.875rem', {
         lineHeight: '1.5',
         fontWeight: '400'
@@ -42,8 +46,9 @@ module.exports = {
       'sans': ['Noto Sans TC', 'ui-sans-serif']
     },
     screens: {
-      'md': '768px',
-      'lg': '1296px'
+      'md': '640px',
+      'lg': '1024px',
+      'xl': '1296px'
     },
     extend: {
       spacing: {

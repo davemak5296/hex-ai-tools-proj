@@ -1,11 +1,11 @@
-const aiCardTitleWrap = document.querySelectorAll('.ai_card_titleWrap');
+const aiCardTitle = document.querySelectorAll('.ai_card_titleWrap');
 
-let maxHeight = 0;
-aiCardTitleWrap.forEach(item => {
-  if (item.offsetHeight > maxHeight) {
-    maxHeight = item.offsetHeight;
+let aiCardTitleMaxHeight = 0;
+aiCardTitle.forEach((item) => {
+  if (item.offsetHeight > aiCardTitleMaxHeight) {
+    aiCardTitleMaxHeight = item.offsetHeight;
   }
 });
-aiCardTitleWrap.forEach(item => {
-  item.style.height = maxHeight + 'px';
+aiCardTitle.forEach((item) => {
+  item.style.height = aiCardTitleMaxHeight + "px";
 });

@@ -8,6 +8,18 @@
   .gradient-overlay {
     mask-image: linear-gradient(to left, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 15%, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%)
   }
+  .ai-categories-wrap {
+    overflow-x: scroll; /* Show scrollbar only when necessary */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    scroll-snap-type: x mandatory;
+  }
+  .ai-categories-wrap::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  .ai-categories-wrap > * {
+    scroll-snap-align: start;
+  }
 }
 /* @import "./index.css";
 @import "./App.css"; */
