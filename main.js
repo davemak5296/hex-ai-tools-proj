@@ -10,6 +10,13 @@ $(document).ready( function() {
   // }).each( function() {
   //   this.style.height = aiCardTitleMaxHeight + 'px';
   // })
+  // menu icon logic
+  let menuIcon = $('.menu-icon');
+  let menu = $('.menu');
+  menu.hide();
+  menuIcon.click(function(){
+    menu.slideToggle(350, 'swing');
+  })
 
   // carousel logic
   let carousel = $('.carousel');

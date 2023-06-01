@@ -1,6 +1,7 @@
 module.exports = {
   content: [
     "index.html",
+    "pricing/index.html",
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
@@ -21,7 +22,15 @@ module.exports = {
         lineHeight: '1.2',
         fontWeight: '900'
       }],
+      '2xl': ['1.5rem', {
+        lineHeight: '1.2',
+        fontWeight: '900'
+      }],
       '3xl': ['2rem', {
+        lineHeight: '1.2',
+        fontWeight: '900'
+      }],
+      '4xl': ['2.25rem', {
         lineHeight: '1.2',
         fontWeight: '900'
       }],
