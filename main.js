@@ -2,14 +2,14 @@ import $ from 'jquery';
 window.$ = $;
 
 $(document).ready( function() {
-  let aiCardTitleMaxHeight = 0;
-  $('.ai_card_titleWrap').each( function() {
-    if (this.offsetHeight > aiCardTitleMaxHeight) {
-      aiCardTitleMaxHeight = this.offsetHeight;
-    }
-  }).each( function() {
-    this.style.height = aiCardTitleMaxHeight + 'px';
-  })
+  // let aiCardTitleMaxHeight = 0;
+  // $('.ai_card_titleWrap').each( function() {
+  //   if (this.offsetHeight > aiCardTitleMaxHeight) {
+  //     aiCardTitleMaxHeight = this.offsetHeight;
+  //   }
+  // }).each( function() {
+  //   this.style.height = aiCardTitleMaxHeight + 'px';
+  // })
 
   // carousel logic
   let carousel = $('.carousel');
