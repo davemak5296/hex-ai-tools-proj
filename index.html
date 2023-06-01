@@ -9,17 +9,40 @@
 </head>
   <body>
     <main class="w-full xl:max-w-[1296px] xl:mx-auto px-3 xl:px-0">
-    <!-- <main class="max-w-full lg:max-w-[1296px] mx-auto my-0"> -->
       <nav class="w-full h-20 flex justify-between items-center border-white border-b">
         <div class="w-[147px] lg:w-[245px] h-6 lg:h-10">
           <img src="/assets/logo.png" alt="">
         </div>
-        <ul class="hidden lg:h-12 lg:flex items-center">
-          <li><a href="" class="text-base">首頁</a></li>
-          <li><a href="" class="text-base ml-5">定價</a></li>
+        <ul class="hidden lg:h-12 md:flex items-center">
+          <li><a href="/hex-ai-tools-proj" class="text-base">首頁</a></li>
+          <li><a href="/hex-ai-tools-proj/pricing/" class="text-base ml-5">定價</a></li>
         </ul>
-        <img src="/assets/icons/menu.png" class="h-10 w-10 lg:hidden" alt="">
+        <img src="/assets/icons/menu.png" class="menu-icon h-10 w-10 md:hidden cursor-pointer" alt="">
       </nav>
+      <div class="menu fixed z-10 bg-black top-20 bottom-0 right-0 left-0 flex flex-col">
+        <div class="grow flex flex-col justify-center items-center">
+          <a href="/hex-ai-tools-proj" class="text-7xl">首頁</a>
+          <a href="/hex-ai-tools-proj/pricing/" class="text-7xl">定價</a>
+        </div>
+        <footer class="max-w-full lg:max-w-[1296px] lg:mx-auto h-22 py-5 grow-0 flex justify-between flex-wrap">
+          <ul class="py-3 hidden lg:flex text-base font-bold">
+            <li class="w-[200px] mr-5"><a href="">AI工具王 © 2023</a></li>
+            <li class="mr-5"><a href="">Facebook</a></li>
+            <li class="mr-5"><a href="">Twitter</a></li>
+            <li class="mr-5"><a href="">Instagram</a></li>
+          </ul>
+          <div class="w-1/2 lg:hidden flex py-3 items-center text-base font-bold">AI工具王 © 2023</div>
+          <div class="w-1/2 lg:w-fit flex py-3 items-center justify-end">
+            Back to top
+            <img src="/assets/icons/arrow-upward.png" class="w-4 h-4 ml-3" alt="">
+          </div>
+          <ul class="py-3 flex lg:hidden text-base font-bold">
+            <li class="mr-5"><a href="">Facebook</a></li>
+            <li class="mr-5"><a href="">Twitter</a></li>
+            <li class="mr-5"><a href="">Instagram</a></li>
+          </ul>
+        </footer>
+      </div>
       <!-- banner -->
       <section class="w-full my-10 relative">
         <h1 class="text-5xl md:text-7xl lg:text-9xl">
