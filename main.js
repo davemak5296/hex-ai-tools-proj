@@ -13,9 +13,9 @@ $(document).ready( function() {
   // menu icon logic
   let menuIcon = $('.menu-icon');
   let menu = $('.menu');
-  menu.hide();
   menuIcon.click(function(){
-    menu.slideToggle(350, 'swing');
+    menu.toggleClass('visible invisible')
+    menu.toggleClass('opacity-0 opacity-100')
   })
 
   // carousel logic
