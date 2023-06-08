@@ -12,11 +12,33 @@ $(document).ready( function() {
   // })
   // menu icon logic
   let menuIcon = $('.menu-icon');
+  let menuClear = $('.menu-clear');
   let menu = $('.menu');
-  menuIcon.click(function(){
-    menu.toggleClass('visible invisible')
-    menu.toggleClass('opacity-0 opacity-100')
+
+  $('.menu-icon, .menu-clear').click( function() {
+    menuIcon.toggleClass('hidden')
+    menuClear.toggleClass('hidden')
+    menu.toggleClass('visible invisible');
+    menu.toggleClass('opacity-0 opacity-100');
+
+    if (menu.hasClass('visible')) {
+      $('body').css('overflow-y', 'hidden')
+    } else {
+      $('body').css('overflow-y', 'auto')
+    }
   })
+  // menuIcon.click(function(){
+  //   menuIcon.toggleClass('hidden')
+  //   menuClear.toggleClass('hidden')
+  //   menu.toggleClass('visible invisible')
+  //   menu.toggleClass('opacity-0 opacity-100')
+  // })
+  // menuClear.click(function(){
+  //   menuIcon.toggleClass('hidden')
+  //   menuClear.toggleClass('hidden')
+  //   menu.toggleClass('visible invisible')
+  //   menu.toggleClass('opacity-0 opacity-100')
+  // })
 
   // carousel logic
   let carousel = $('.carousel');

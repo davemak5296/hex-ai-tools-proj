@@ -9,7 +9,7 @@
   <title>Document</title>
 </head>
   <body>
-    <main class="w-full xl:max-w-[1296px] xl:mx-auto px-3 xl:px-0">
+    <main class="max-w-full xl:max-w-[1296px] xl:mx-auto px-3 xl:px-0">
       <nav class="w-full h-20 flex justify-between items-center border-white border-b">
         <div class="w-[147px] lg:w-[245px] h-6 lg:h-10">
           <img src="/assets/logo.png" alt="logo">
@@ -18,7 +18,8 @@
           <li><a href="/hex-ai-tools-proj/" class="text-base">首頁</a></li>
           <li><a href="/hex-ai-tools-proj/pricing/" class="text-base ml-5">定價</a></li>
         </ul>
-        <i class="menu-icon md:hidden cursor-pointer material-icons">menu</i>
+        <i class="menu-icon md:hidden cursor-pointer material-icons transition-all duration-1000 select-none">menu</i>
+        <i class="menu-clear hidden cursor-pointer material-icons transition-all duration-1000 select-none">clear</i>
       </nav>
       <div class="invisible opacity-0 transition-opacity duration-300 menu fixed z-10 bg-black top-20 bottom-0 right-0 left-0 flex flex-col">
         <div class="grow flex flex-col justify-center items-center">
@@ -112,7 +113,7 @@
           </div>
         </div>
         <!-- partner-cards -->
-        <ul class="carousel w-[400px] lg:w-full mt-12 lg:mt-40 mx-auto lg:mx-0 flex lg:justify-between overflow-x-hidden transition-transform duration-500">
+        <ul class="carousel max-w-[400px] lg:max-w-full mt-12 lg:mt-40 mx-auto lg:mx-0 flex lg:justify-between overflow-x-hidden transition-transform duration-500">
           <li class="carousel-item w-full lg:w-1/3 mr-6 p-5 lg:p-10 bg-white/[8%] outline-1 rounded-xl flex-none lg:flex-auto flex flex-col">
             <div class="flex">
               <i class="text-base material-icons">star_rate</i>
@@ -184,8 +185,7 @@
         </div>
       </section>
     </main>
-    <!-- ai-tools -->
-    <main class="my-30 lg:my-40 px-3 xl:px-0 py-20 lg:py-40 text-black bg-white outline-1 rounded-3xl lg:rounded-[5rem]">
+    <main class="max-w-full my-30 lg:my-40 px-3 xl:px-0 py-20 lg:py-40 text-black bg-white outline-1 rounded-3xl lg:rounded-[5rem]">
       <div class="max-w-full lg:max-w-[1296px] lg:mx-auto">
         <h2 class="w-fit mx-auto text-center text-3xl lg:text-7xl lg:text-black">這些超酷的應用，<br class="lg:hidden">都來自 AI工具王</h2>
         <!-- search-box -->
@@ -343,7 +343,7 @@
         </ul>
       </div>
     </main>
-    <main class="w-full xl:max-w-[1296px] xl:mx-auto mt-10 lg:mt-20 px-3 xl:px-0">
+    <main class="max-w-full xl:max-w-[1296px] xl:mx-auto mt-10 lg:mt-20 px-3 xl:px-0">
       <!-- call to action -->
       <section class="max-w-full lg:max-w-[1296px] lg:mx-auto py-30 lg:py-20">
         <div class="text-3xl lg:text-5xl mx-auto w-fit text-center">現在就來建立<br class="lg:hidden">屬於你的服務吧</div>
