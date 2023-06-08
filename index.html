@@ -185,7 +185,8 @@
         </div>
       </section>
     </main>
-    <main class="max-w-full my-30 lg:my-40 px-3 xl:px-0 py-20 lg:py-40 text-black bg-white outline-1 rounded-3xl lg:rounded-[5rem]">
+    <!-- ai-tools -->
+    <main class="ai-tools-container max-w-full my-30 lg:my-40 px-3 xl:px-0 py-20 lg:py-40 text-black bg-white outline-1 rounded-3xl lg:rounded-[5rem]">
       <div class="max-w-full lg:max-w-[1296px] lg:mx-auto">
         <h2 class="w-fit mx-auto text-center text-3xl lg:text-7xl lg:text-black">這些超酷的應用，<br class="lg:hidden">都來自 AI工具王</h2>
         <!-- search-box -->
@@ -196,11 +197,54 @@
           <input type="text" class="w-full shrink text-base font-normal bg-[#F2F2F2] outline-none" name="search" placeholder="輸入關鍵字搜尋">
         </div>
         <!-- filters -->
-        <div class="mt-4 lg:mt-6 h-16 flex justify-between items-center">
-          <button type="button" class="flex py-5 pl-10 pr-8 items-center outline outline-[#f2f2f2] outline-2 rounded-xl">
-            篩選
-            <i class="text-base ml-3 material-icons">tune</i>
-          </button>
+        <div class="filter-container mt-4 lg:mt-6 h-16 flex justify-between items-center">
+          <div class="relative">
+            <button type="button" class="filter-btn flex py-5 pl-10 pr-8 items-center outline outline-[#f2f2f2] outline-2 rounded-xl">
+              篩選
+              <i class="text-base ml-3 material-icons">filter_alt</i>
+            </button>
+            <ul class="filter-options invisible opacity-0 absolute left-0 top-[70px] w-[240px] h-[500px] py-5 bg-white shadow-[0_4px_20px_0px_rgba(0,0,0,0.15)] border border-1 border-white rounded-2xl transition-opacity duration-300">
+              <li class="pr-10 pl-8 py-1 text-xs font-bod text-[#919191] select-none">AI模型</li>
+              <li class="filter-model pr-10 pl-8 py-1 flex justify-between text-base hover:bg-[#F2F2F2] hover:cursor-pointer select-none">所有模型
+                <i class="hidden material-icons text-base align-bottom">check</i>
+              </li>
+              <li class="filter-model pr-10 pl-8 py-1 flex justify-between text-base hover:bg-[#F2F2F2] hover:cursor-pointer select-none">卡卡
+                <i class="hidden material-icons text-base align-bottom">check</i>
+              </li>
+              <li class="filter-model pr-10 pl-8 py-1 flex justify-between text-base hover:bg-[#F2F2F2] hover:cursor-pointer select-none">杰杰
+                <i class="hidden material-icons text-base align-bottom">check</i>
+              </li>
+              <li class="filter-model pr-10 pl-8 py-1 flex justify-between text-base hover:bg-[#F2F2F2] hover:cursor-pointer select-none">琪琪
+                <i class="hidden material-icons text-base align-bottom">check</i>
+              </li>
+              <li class="filter-model pr-10 pl-8 pb-4 flex justify-between border-b border-[#F2F2F2] text-base hover:bg-[#F2F2F2] hover:cursor-pointer select-none">昊昊
+                <i class="hidden material-icons text-base align-bottom">check</i>
+              </li>
+              <li class="pr-10 pl-8 pt-4 py-1 text-xs font-bod text-[#919191] select-none">類型</li>
+              <li class="filter-type pr-10 pl-8 py-1 flex justify-between text-base hover:bg-[#F2F2F2] hover:cursor-pointer select-none">所有類型
+                <i class="hidden material-icons text-base align-bottom">check</i>
+              </li>
+              <li class="filter-type pr-10 pl-8 py-1 flex justify-between text-base hover:bg-[#F2F2F2] hover:cursor-pointer select-none">篩選項目1
+                <i class="hidden material-icons text-base align-bottom">check</i>
+              </li>
+              <li class="filter-type pr-10 pl-8 py-1 flex justify-between text-base hover:bg-[#F2F2F2] hover:cursor-pointer select-none">篩選項目2
+                <i class="hidden material-icons text-base align-bottom">check</i>
+              </li>
+              <li class="filter-type pr-10 pl-8 py-1 flex justify-between text-base hover:bg-[#F2F2F2] hover:cursor-pointer select-none">篩選項目3
+                <i class="hidden material-icons text-base align-bottom">check</i>
+              </li>
+              <li class="filter-type pr-10 pl-8 py-1 flex justify-between text-base hover:bg-[#F2F2F2] hover:cursor-pointer select-none">篩選項目4
+                <i class="hidden material-icons text-base align-bottom">check</i>
+              </li>
+              <li class="filter-type pr-10 pl-8 py-1 flex justify-between text-base hover:bg-[#F2F2F2] hover:cursor-pointer select-none">篩選項目5
+                <i class="hidden material-icons text-base align-bottom">check</i>
+              </li>
+              <li class="filter-type pr-10 pl-8 flex justify-between text-base hover:bg-[#F2F2F2] hover:cursor-pointer select-none">篩選項目6
+                <i class="hidden material-icons text-base align-bottom">check</i>
+              </li>
+            </ul>
+          </div>
+          
           <ul class="hidden lg:flex lg:h-10">
             <li class="mr-2 py-2 px-4 font-bold bg-[#F2F2F2] outline-1 rounded-2xl">全部</li>
             <li class="mr-2 py-2 px-4 outline-1 rounded-2xl text-[#919191]">聊天</li>
@@ -210,10 +254,17 @@
             <li class="mr-2 py-2 px-4 outline-1 rounded-2xl text-[#919191]">客服</li>
             <li class="mr-2 py-2 px-4 outline-1 rounded-2xl text-[#919191]">生產力</li>
           </ul>
-          <button type="button"  class="flex py-5 pl-10 pr-8 items-center outline outline-[#f2f2f2] outline-2 rounded-xl">
-            由新到舊
-            <i class="text-base ml-3 material-icons">keyboard_arrow_down</i>
-          </button>
+          <div class="relative sort-container">
+            <span class="sort-btn py-5 pl-10 pr-8 outline outline-[#f2f2f2] outline-2 rounded-xl cursor-pointer select-none">
+              <button type="button">由新到舊</button>
+              <i class="text-base ml-3 material-icons">keyboard_arrow_down</i>
+          </span>
+          <ul class="sort-options invisible opacity-0 absolute right-0 top-[50px] w-[144px] h-[96px] py-5 bg-white shadow-[0_4px_20px_0px_rgba(0,0,0,0.15)] border border-1 border-white rounded-xl transition-opacity duration-300">
+            <li class="sort-new pr-10 pl-8 py-1 text-base hover:bg-[#F2F2F2] hover:cursor-pointer select-none">由新到舊</li>
+            <li class="sort-old pr-10 pl-8 py-1 text-base hover:bg-[#F2F2F2] hover:cursor-pointer select-none">由舊到新</li>
+          </ul>
+          </div>
+          
         </div>
         <!-- categories smaller than lg -->
         <ul class="flex flex-nowrap lg:hidden mt-4 ai-categories-wrap select-none" draggable="true">
