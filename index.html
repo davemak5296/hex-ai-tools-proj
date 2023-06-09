@@ -1,25 +1,25 @@
 <!DOCTYPE html>
-<html lang="en" class="bg-[#020202] text-white font-sans">
+<html lang="en" class="bg-[#020202] text-white font-sans scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   <link rel="stylesheet" href="main.css" />
-  <title>Document</title>
+  <title>AI工具王</title>
 </head>
   <body>
-    <main class="max-w-full xl:max-w-[1296px] xl:mx-auto px-3 xl:px-0">
+    <main class="w-full xl:max-w-[1296px] xl:mx-auto px-3 xl:px-0">
       <nav class="w-full h-20 flex justify-between items-center border-white border-b">
-        <div class="w-[147px] lg:w-[245px] h-6 lg:h-10">
-          <img src="/assets/logo.png" alt="logo">
-        </div>
+        <h1 class="w-[147px] lg:w-[245px] h-6 lg:h-10">
+          <a href="/hex-ai-tools-proj/" class="bg-[url('/assets/logo.png')] bg-cover bg-no-repeat w-[147px] lg:w-[245px] h-6 lg:h-10 float-left indent-[101%] whitespace-nowrap overflow-hidden">AI工具王</a>
+        </h1>
         <ul class="hidden lg:h-12 md:flex items-center">
           <li><a href="/hex-ai-tools-proj/" class="text-base">首頁</a></li>
           <li><a href="/hex-ai-tools-proj/pricing/" class="text-base ml-5">定價</a></li>
         </ul>
         <i class="menu-icon md:hidden cursor-pointer material-icons transition-all duration-1000 select-none">menu</i>
-        <i class="menu-clear hidden cursor-pointer material-icons transition-all duration-1000 select-none">clear</i>
+        <!-- <i class="menu-clear hidden cursor-pointer material-icons transition-all duration-1000 select-none">clear</i> -->
       </nav>
       <div class="invisible opacity-0 transition-opacity duration-300 menu fixed z-10 bg-black top-20 bottom-0 right-0 left-0 flex flex-col">
         <div class="grow flex flex-col justify-center items-center">
@@ -41,7 +41,7 @@
       </div>
       <!-- banner -->
       <section class="w-full my-10 relative">
-        <h1 class="text-5xl md:text-7xl lg:text-9xl">
+        <h2 class="text-5xl md:text-7xl lg:text-9xl">
           透過
           <br>
           AI工具王的
@@ -49,7 +49,7 @@
           強大模型
           <br>
           讓您的業務<br class="lg:hidden">更聰明
-        </h1>
+        </h2>
         <button type="button" class="my-10 mb-[180px] lg:mb-25 w-[160px] text-xl font-black py-5 px-10 outline outline-1 rounded-2xl cursor-pointer">開始使用</button>
         <div class="w-fit lg:w-[540px] h-fit lg:h-[180px] flex ml-auto">
           <div class="overflow-hidden">
@@ -186,16 +186,17 @@
       </section>
     </main>
     <!-- ai-tools -->
-    <main class="ai-tools-container max-w-full my-30 lg:my-40 px-3 xl:px-0 py-20 lg:py-40 text-black bg-white outline-1 rounded-3xl lg:rounded-[5rem]">
+    <main class="ai-tools-container mt-30 lg:mt-40 px-3 xl:px-0 py-20 lg:py-40 text-black bg-white outline-1 rounded-3xl lg:rounded-[5rem]">
+    <!-- <main class="ai-tools-container max-w-full my-30 lg:my-40 px-3 xl:px-0 py-20 lg:py-40 text-black bg-white outline-1 rounded-3xl lg:rounded-[5rem]"> -->
       <div class="max-w-full lg:max-w-[1296px] lg:mx-auto">
         <h2 class="w-fit mx-auto text-center text-3xl lg:text-7xl lg:text-black">這些超酷的應用，<br class="lg:hidden">都來自 AI工具王</h2>
         <!-- search-box -->
-        <div class="mt-8 lg:mt-20 flex px-10 py-5 bg-[#F2F2F2] outline-2 rounded-2xl">
+        <label for="search-box" class="mt-8 lg:mt-20 flex px-10 py-5 bg-[#F2F2F2] outline-2 rounded-2xl">
           <button type="button">
             <i class="text-2xl mr-3 opacity-50 material-icons">search</i>
           </button>
-          <input type="text" class="w-full shrink text-base font-normal bg-[#F2F2F2] outline-none" name="search" placeholder="輸入關鍵字搜尋">
-        </div>
+          <input id="search-box" type="text" class="w-full shrink text-base font-normal bg-[#F2F2F2] outline-none" name="search" placeholder="輸入關鍵字搜尋">
+        </label>
         <!-- filters -->
         <div class="filter-container mt-4 lg:mt-6 h-16 flex justify-between items-center">
           <div class="relative">
@@ -247,15 +248,15 @@
             </ul>
           </div>
           
-          <ul class="hidden lg:flex lg:h-10">
-            <li class="mr-2 py-2 px-4 font-bold bg-[#F2F2F2] outline-1 rounded-2xl">全部</li>
-            <li class="mr-2 py-2 px-4 outline-1 rounded-2xl text-[#919191]">聊天</li>
-            <li class="mr-2 py-2 px-4 outline-1 rounded-2xl text-[#919191]">影像辨識</li>
-            <li class="mr-2 py-2 px-4 outline-1 rounded-2xl text-[#919191]">翻譯</li>
-            <li class="mr-2 py-2 px-4 outline-1 rounded-2xl text-[#919191]">行銷</li>
-            <li class="mr-2 py-2 px-4 outline-1 rounded-2xl text-[#919191]">客服</li>
-            <li class="mr-2 py-2 px-4 outline-1 rounded-2xl text-[#919191]">生產力</li>
-          </ul>
+          <div class="hidden lg:flex lg:h-10">
+            <button type="button" class="mr-2 py-2 px-4 font-bold bg-[#F2F2F2] outline-1 rounded-2xl">全部</button>
+            <button type="button" class="mr-2 py-2 px-4 outline-1 rounded-2xl text-[#919191]">聊天</button>
+            <button type="button" class="mr-2 py-2 px-4 outline-1 rounded-2xl text-[#919191]">影像辨識</button>
+            <button type="button" class="mr-2 py-2 px-4 outline-1 rounded-2xl text-[#919191]">翻譯</button>
+            <button type="button" class="mr-2 py-2 px-4 outline-1 rounded-2xl text-[#919191]">行銷</button>
+            <button type="button" class="mr-2 py-2 px-4 outline-1 rounded-2xl text-[#919191]">客服</button>
+            <button type="button" class="mr-2 py-2 px-4 outline-1 rounded-2xl text-[#919191]">生產力</button>
+          </div>
           <div class="relative sort-container">
             <span class="sort-btn py-5 pl-10 pr-8 outline outline-[#f2f2f2] outline-2 rounded-xl cursor-pointer select-none">
               <button type="button">由新到舊</button>
@@ -269,15 +270,15 @@
           
         </div>
         <!-- categories smaller than lg -->
-        <ul class="flex flex-nowrap lg:hidden mt-4 ai-categories-wrap select-none" draggable="true">
-          <li class="w-fit flex-none mr-2 py-2 px-4 font-bold bg-[#F2F2F2] outline-1 rounded-2xl cursor-pointer">全部</li>
-          <li class="w-fit flex-none  mr-2 py-2 px-4 outline-1 rounded-2xl text-[#919191] cursor-pointer">聊天</li>
-          <li class="w-fit flex-none mr-2 py-2 px-4 outline-1 rounded-2xl text-[#919191] cursor-pointer">影像辨識</li>
-          <li class="w-fit flex-none mr-2 py-2 px-4 outline-1 rounded-2xl text-[#919191] cursor-pointer">翻譯</li>
-          <li class="w-fit flex-none mr-2 py-2 px-4 outline-1 rounded-2xl text-[#919191] cursor-pointer">行銷</li>
-          <li class="w-fit flex-none mr-2 py-2 px-4 outline-1 rounded-2xl text-[#919191] cursor-pointer">客服</li>
-          <li class="w-fit flex-none mr-2 py-2 px-4 outline-1 rounded-2xl text-[#919191] cursor-pointer">生產力</li>
-        </ul>
+        <div class="flex flex-nowrap lg:hidden mt-4 ai-categories-wrap select-none" draggable="true">
+          <button type="button" class="w-fit flex-none mr-2 py-2 px-4 font-bold bg-[#F2F2F2] outline-1 rounded-2xl cursor-pointer">全部</button>
+          <button type="button" class="w-fit flex-none mr-2 py-2 px-4 outline-1 rounded-2xl text-[#919191] cursor-pointer">聊天</button>
+          <button type="button" class="w-fit flex-none mr-2 py-2 px-4 outline-1 rounded-2xl text-[#919191] cursor-pointer">影像辨識</button>
+          <button type="button" class="w-fit flex-none mr-2 py-2 px-4 outline-1 rounded-2xl text-[#919191] cursor-pointer">翻譯</button>
+          <button type="button" class="w-fit flex-none mr-2 py-2 px-4 outline-1 rounded-2xl text-[#919191] cursor-pointer">行銷</button>
+          <button type="button" class="w-fit flex-none mr-2 py-2 px-4 outline-1 rounded-2xl text-[#919191] cursor-pointer">客服</button>
+          <button type="button" class="w-fit flex-none mr-2 py-2 px-4 outline-1 rounded-2xl text-[#919191] cursor-pointer">生產力</button>
+        </div>
         <!-- ai-cards -->
         <ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-y-3 lg:gap-y-0 md:gap-x-3 lg:gap-x-6 mt-12 lg:mt-10">
           <li class="border border-[#F2F2F2] border-1 rounded-2xl flex flex-col">
@@ -384,19 +385,19 @@
           </li>
         </ul>
         <!-- pagination -->
-        <ul class="mt-8 lg:mt-10 flex h-12 w-fit ml-auto">
-          <li class="w-12 flex justify-center items-center outline-1 rounded-2xl bg-black text-white">1</li>
-          <li class="w-12 flex justify-center items-center">2</li>
-          <li class="w-12 flex justify-center items-center">3</li>
-          <li class="w-12 flex justify-center items-center">4</li>
-          <li class="w-12 flex justify-center items-center">5</li>
-          <li class="w-12 flex justify-center items-center">
+        <div class="mt-8 lg:mt-10 flex h-12 w-fit ml-auto">
+          <button type="button" class="w-12 flex justify-center items-center outline-1 rounded-2xl bg-black text-white">1</button>
+          <button type="button" class="w-12 flex justify-center items-center">2</button>
+          <button type="button" class="w-12 flex justify-center items-center">3</button>
+          <button type="button" class="w-12 flex justify-center items-center">4</button>
+          <button type="button" class="w-12 flex justify-center items-center">5</button>
+          <button type="button" class="w-12 flex justify-center items-center">
             <i class="material-icons">keyboard_arrow_right</i>
-          </li>
-        </ul>
+          </button>
+        </div>
       </div>
     </main>
-    <main class="max-w-full xl:max-w-[1296px] xl:mx-auto mt-10 lg:mt-20 px-3 xl:px-0">
+    <main class="w-full xl:max-w-[1296px] xl:mx-auto mt-10 lg:mt-20 px-3 xl:px-0">
       <!-- call to action -->
       <section class="max-w-full lg:max-w-[1296px] lg:mx-auto py-30 lg:py-20">
         <div class="text-3xl lg:text-5xl mx-auto w-fit text-center">現在就來建立<br class="lg:hidden">屬於你的服務吧</div>
@@ -407,11 +408,11 @@
       </section>
       <!-- sitemap -->
       <section class="max-w-full lg:max-w-[1296px] lg:mx-auto mt-10 lg:mt-20 py-20 lg:flex lg:justify-between border-t border-b">
-        <div class="max-w-[245px] h-10 lg:opacity-60 lg:order-2">
+        <div class="max-w-[245px] h-10 lg:order-2">
           <img src="/assets/logo.png" alt="logo">
         </div>
         <ul class="mt-10 lg:mt-0 text-5xl lg:text-7xl lg:order-1">
-          <li><a href="/hex-ai-tools-proj">首頁</a></li>
+          <li><a href="#">首頁</a></li>
           <li class="mt-2"><a href="/hex-ai-tools-proj/pricing/">定價</a></li>
         </ul>
       </section>

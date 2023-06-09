@@ -11,16 +11,14 @@ $(document).ready( function() {
   //   this.style.height = aiCardTitleMaxHeight + 'px';
   // })
   // menu icon logic
-  let $menuIcon = $('.menu-icon');
-  let $menuClear = $('.menu-clear');
-  let $menu = $('.menu');
+  $('.menu-icon').click( function() {
+    $(this).toggleClass('open')
+    $(this).hasClass('open')
+      ? $(this).text('clear')
+      : $(this).text('menu')
+    $('.menu').toggleClass('visible invisible').toggleClass('opacity-0 opacity-100');
 
-  $('.menu-icon, .menu-clear').click( function() {
-    $menuIcon.toggleClass('hidden')
-    $menuClear.toggleClass('hidden')
-    $menu.toggleClass('visible invisible').toggleClass('opacity-0 opacity-100');
-
-    $menu.hasClass('visible')
+    $('.menu').hasClass('visible')
     ? $('body').css('overflow-y', 'hidden')
     : $('body').css('overflow-y', 'auto')
   })
@@ -132,4 +130,18 @@ $(document).ready( function() {
     currentIndex = $dots.index(this);
     currentScrollLeft += walk;
   });
+
+  //faq wrapper logic
+  let $faqTitles = $('.faq-title')
+  let $wrappers = $('.faq-wrapper');
+  let $contents = $('.faq-wrapper p')
+
+  $faqTitles.click(function() {
+    $(this).toggleClass('open')
+    $(this).siblings().toggleClass('grid-rows-[0fr] grid-rows-[1fr]').toggleClass('mt-0 mt-4').toggleClass('opacity-0 opacity-100')
+
+    $(this).hasClass('open')
+      ? $(this).children().text('remove')
+      : $(this).children().text('add')
+  })
 })
