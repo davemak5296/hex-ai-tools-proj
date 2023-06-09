@@ -199,14 +199,15 @@
         <!-- filters -->
         <div class="filter-container mt-4 lg:mt-6 h-16 flex justify-between items-center">
           <div class="relative">
-            <button type="button" class="filter-btn flex py-5 pl-10 pr-8 items-center outline outline-[#f2f2f2] outline-2 rounded-xl">
-              篩選
-              <i class="text-base ml-3 material-icons">filter_alt</i>
-            </button>
+            <div class="filter-btn flex py-5 px-8 items-center outline outline-[#f2f2f2] outline-2 rounded-xl cursor-pointer select-none">
+              <button type="button">篩選</button>
+              <i class="material-icons filter-icon md:block w-6 ml-3 text-center text-base">filter_alt</i>
+              <span class="filter-icon-sm hidden md:hidden w-6 h-6 ml-3 text-center text-base border-1 border-black rounded-md bg-black text-white"></span>
+            </div>
             <ul class="filter-options invisible opacity-0 absolute left-0 top-[70px] w-[240px] h-[500px] py-5 bg-white shadow-[0_4px_20px_0px_rgba(0,0,0,0.15)] border border-1 border-white rounded-2xl transition-opacity duration-300">
               <li class="pr-10 pl-8 py-1 text-xs font-bod text-[#919191] select-none">AI模型</li>
-              <li class="filter-model pr-10 pl-8 py-1 flex justify-between text-base hover:bg-[#F2F2F2] hover:cursor-pointer select-none">所有模型
-                <i class="hidden material-icons text-base align-bottom">check</i>
+              <li data-model-type="all" class="filter-model pr-10 pl-8 py-1 flex justify-between text-base hover:bg-[#F2F2F2] hover:cursor-pointer select-none">所有模型
+                <i class="material-icons text-base align-bottom">check</i>
               </li>
               <li class="filter-model pr-10 pl-8 py-1 flex justify-between text-base hover:bg-[#F2F2F2] hover:cursor-pointer select-none">卡卡
                 <i class="hidden material-icons text-base align-bottom">check</i>
@@ -217,29 +218,30 @@
               <li class="filter-model pr-10 pl-8 py-1 flex justify-between text-base hover:bg-[#F2F2F2] hover:cursor-pointer select-none">琪琪
                 <i class="hidden material-icons text-base align-bottom">check</i>
               </li>
-              <li class="filter-model pr-10 pl-8 pb-4 flex justify-between border-b border-[#F2F2F2] text-base hover:bg-[#F2F2F2] hover:cursor-pointer select-none">昊昊
+              <li class="filter-model pr-10 pl-8 py-1 flex justify-between text-base hover:bg-[#F2F2F2] hover:cursor-pointer select-none">昊昊
                 <i class="hidden material-icons text-base align-bottom">check</i>
               </li>
+              <li class="w-full pb-3 border-b border-[#F2F2F2]"></li>
               <li class="pr-10 pl-8 pt-4 py-1 text-xs font-bod text-[#919191] select-none">類型</li>
-              <li class="filter-type pr-10 pl-8 py-1 flex justify-between text-base hover:bg-[#F2F2F2] hover:cursor-pointer select-none">所有類型
+              <li data-service-type="all" class="filter-service pr-10 pl-8 py-1 flex justify-between text-base hover:bg-[#F2F2F2] hover:cursor-pointer select-none">所有類型
+                <i class="material-icons text-base align-bottom">check</i>
+              </li>
+              <li class="filter-service pr-10 pl-8 py-1 flex justify-between text-base hover:bg-[#F2F2F2] hover:cursor-pointer select-none">聊天
                 <i class="hidden material-icons text-base align-bottom">check</i>
               </li>
-              <li class="filter-type pr-10 pl-8 py-1 flex justify-between text-base hover:bg-[#F2F2F2] hover:cursor-pointer select-none">篩選項目1
+              <li class="filter-service pr-10 pl-8 py-1 flex justify-between text-base hover:bg-[#F2F2F2] hover:cursor-pointer select-none">影像辨識
                 <i class="hidden material-icons text-base align-bottom">check</i>
               </li>
-              <li class="filter-type pr-10 pl-8 py-1 flex justify-between text-base hover:bg-[#F2F2F2] hover:cursor-pointer select-none">篩選項目2
+              <li class="filter-service pr-10 pl-8 py-1 flex justify-between text-base hover:bg-[#F2F2F2] hover:cursor-pointer select-none">翻譯
                 <i class="hidden material-icons text-base align-bottom">check</i>
               </li>
-              <li class="filter-type pr-10 pl-8 py-1 flex justify-between text-base hover:bg-[#F2F2F2] hover:cursor-pointer select-none">篩選項目3
+              <li class="filter-service pr-10 pl-8 py-1 flex justify-between text-base hover:bg-[#F2F2F2] hover:cursor-pointer select-none">行銷
                 <i class="hidden material-icons text-base align-bottom">check</i>
               </li>
-              <li class="filter-type pr-10 pl-8 py-1 flex justify-between text-base hover:bg-[#F2F2F2] hover:cursor-pointer select-none">篩選項目4
+              <li class="filter-service pr-10 pl-8 py-1 flex justify-between text-base hover:bg-[#F2F2F2] hover:cursor-pointer select-none">客服
                 <i class="hidden material-icons text-base align-bottom">check</i>
               </li>
-              <li class="filter-type pr-10 pl-8 py-1 flex justify-between text-base hover:bg-[#F2F2F2] hover:cursor-pointer select-none">篩選項目5
-                <i class="hidden material-icons text-base align-bottom">check</i>
-              </li>
-              <li class="filter-type pr-10 pl-8 flex justify-between text-base hover:bg-[#F2F2F2] hover:cursor-pointer select-none">篩選項目6
+              <li class="filter-service pr-10 pl-8 py-1 flex justify-between text-base hover:bg-[#F2F2F2] hover:cursor-pointer select-none">生產力
                 <i class="hidden material-icons text-base align-bottom">check</i>
               </li>
             </ul>

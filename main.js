@@ -25,10 +25,14 @@ $(document).ready( function() {
     : $('body').css('overflow-y', 'auto')
   })
 
-  // filter logic
+// filter logic
+
+  // toggle filter drop down
   $('.filter-btn').click(function() {
     $('.filter-options').toggleClass('opacity-0 opacity-100').toggleClass('invisible')
   })
+
+  // close filter/sort drop down when user click filterBtnsortBtn or outside area of filter/sort drop down
   $('.ai-tools-container').click(function(e) {
     if(!e.target.closest('.filter-btn') && !e.target.closest('.filter-options')) 
       $('.filter-options').addClass('opacity-0 invisible')
@@ -36,17 +40,66 @@ $(document).ready( function() {
     if(!e.target.closest('.sort-btn')) 
       $('.sort-options').addClass('opacity-0 invisible')
   })
-  $('.filter-options li:is(.filter-model, .filter-type)').click(function() {
-    let clickedElementClass = $(this).attr('class').split(' ')[0];
-    let tokenlist = ($(this)[0].classList);
-    Array.prototype.map.call(tokenlist, (e,i) => {
-      console.log(e)
-    })
-    $('li.'+ clickedElementClass).children('i').addClass('hidden')
-    $(this).children('i').removeClass('hidden')
+
+  let currentModel = '';
+  let currentService = '';
+
+  let currentModelCount = 0
+  let currentServiceCount = 0
+  $('.filter-options li:is(.filter-model, .filter-service)').click(function() {
+    // toggle check icon adjacent to each filter option
+    let clickedElementClass = $(this).attr('class').split(' ')[0];  // extract filter type (model or service)
+    $('li.'+ clickedElementClass).children('i').addClass('hidden')  // select all filter options with that type, and hide their check icon
+    $(this).children('i').removeClass('hidden')  // show check icon of clicked filter option
+
+    // (for bp <md ) change filter counter based on no. of filters applied
+    let $filterIconSm = $('.filter-icon-sm')
+    let $filterIcon = $('.filter-icon')
+
+    if ($(window).width() < 640 ) {
+      if ($(this).hasClass('filter-model')) {
+        currentModelCount = $(this).attr('data-model-type') ? 0 : 1
+      } else if ($(this).hasClass('filter-service')){
+        currentServiceCount = $(this).attr('data-service-type') ? 0 : 1
+      }
+
+      if (currentModelCount + currentServiceCount === 0) {
+        $filterIcon.removeClass('hidden')
+        $filterIconSm.addClass('hidden')
+        return;
+      }
+
+      $filterIcon.addClass('hidden')
+      $filterIconSm.removeClass('hidden').text(`${currentModelCount + currentServiceCount}`)
+      return
+    }
+    
+    // (for bp >md ) hide/show name of applied filters
+    let $filterBtn = $('.filter-btn button')
+    let textInOption = $(this).contents().filter(function() {
+      return this.nodeType === Node.TEXT_NODE
+    }).text().trim()
+
+    if ( $(this).hasClass('filter-model') ) {
+      currentModel = $(this).attr('data-model-type') ? '' : textInOption
+    } else if ( $(this).hasClass('filter-service')) {
+      currentService = $(this).attr('data-service-type') ? '' : textInOption
+    }
+
+    if (!currentModel && !currentService) {                           // no filter applied
+      $filterIcon.removeClass('border-1 border-black rounded-md bg-black text-white')
+      return $filterBtn.text('篩選')
+    }
+    
+    $filterIcon.addClass('border-1 border-black rounded-md bg-black text-white')
+
+    if (!currentModel) return $filterBtn.text(`${currentService}`)    // only model filter applied
+    if (!currentService) return $filterBtn.text(`${currentModel}`)    // only service filter applied
+    
+    return $filterBtn.text(`${currentModel}、${currentService}`)      // both filters applied
   });
 
-  // sorter logic
+// sorter logic
   $('.sort-btn').click(function() {
     $('.sort-options').toggleClass('opacity-0 opacity-100').toggleClass('invisible')
   })
@@ -54,7 +107,7 @@ $(document).ready( function() {
     $('.sort-btn button').text( $(this).text())
   })
 
-  // carousel logic
+// carousel logic
   let $carousel = $('.carousel');
   let $carouselItems = $('.carousel-item');
   let $dots = $('.dot');
